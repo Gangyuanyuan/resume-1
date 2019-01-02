@@ -13,11 +13,19 @@ a{
 	padding: 0;
 }
 
-
 hr{
 	height: 0;
 	border: none;
 	border-top: 1px solid #DEDEDE;
+}
+
+ul,
+ol{
+	list-style: none;
+}
+
+h1,h2,h3,h4,h5,h6{
+	font-weight: normal;
 }
 
 .clearfix::after{
@@ -101,6 +109,7 @@ hr{
 	margin-left: auto;
 	margin-right: auto;
 	background-color: #FFFFFF; 
+	box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.5);
 }
 
 .userCard .welcome{
@@ -184,4 +193,144 @@ hr{
 	height: 30px;
 	fill: white;               /*svg的颜色填充*/
 	vertical-align: top;      /*图标的垂直对齐方式*/
+}
+
+body > main{
+	margin-top: -340px;
+}
+
+body > main .downloadResume-wrapper{
+	text-align: center;
+}
+
+body > main .downloadResume{
+	font-size: 14px;
+	line-height: 16px;
+	padding: 21px 55px;
+	border:1px solid #CDCFD1;
+	background: #EFEFEF;
+	display: inline-block;
+	border-radius: 2px;
+	color: #3d4451;
+	font-weight: bold;
+	margin: 32px 0;
+	transition: box-shadow 0.2s;    /*过渡时间*/
+}
+
+body > main .downloadResume:hover{
+	box-shadow: 0px 4px 13px 0px rgba(0,0,0,0.2);
+}
+
+body > main .selfIntrouduction{
+	max-width: 940px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	font-family: kai;
+    line-height: 1.8;
+    font-size: 18px;
+}
+section.skills,
+section.portfolio{
+	max-width: 940px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 60px;
+}
+section.skills > h2,
+section.portfolio > h2{ 
+	text-align: center;
+	color: #3d4451;
+	font-size: 34px;
+	line-height: 1.2;
+	font-weight: 600;
+}
+section.skills > h3{
+	font-size: 14px;
+	line-height: 1.1;
+	padding-right: 48px;
+}
+section.skills > ol{
+	background: white;
+	box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.5);
+	padding: 42px 50px 16px;
+	margin-top: 30px;
+}
+section.skills > ol > li{
+	float: left;
+	width: 48%;
+	box-sizing: border-box;    /*计算的宽度为50%，宽度包含其他属性*/
+}
+section.skills > ol > li:nth-child(even){        /*第n个元素（n为偶数时）*/
+	float: right;
+}
+section.skills .progressBar{
+	height: 5px;
+	background: #FAE1E1;
+	border-radius: 2px;
+	margin: 4px 0 40px 0;
+}
+section.skills .progressBar > .progress{
+	height: 100%;
+	background: #E6686A;
+	width: 70%;
+	border-radius: 2px;
+}
+
+
+section.portfolio{
+	text-align: center;
+	margin-bottom: 100px;
+}
+section.portfolio > nav{
+	text-align: center;      /*文本的水平对齐方式*/
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 32px;
+}
+section.portfolio > nav > ol{
+	display: inline-block;    /*块状元素显示为行内元素*/
+	vertical-align: top;      /*行内元素的垂直对齐方式，消除上行代码产生的bug*/
+}
+section.portfolio > nav > ol > li{
+	float: left;
+	margin-left: 40px;
+	cursor: pointer;       /*鼠标外观：手指*/
+}
+section.portfolio > nav > ol > li:first-child{
+	margin-left: 0;
+}
+
+section.portfolio > nav .bar{
+	height: 5px;
+	background: white;
+	margin-top: 10px;
+	margin-bottom: 28px;
+	border-radius: 2px;
+}
+section.portfolio > nav .bar-inner{
+	height: 100%;
+	background: #E6686A;
+	border-radius: 2px;
+	transition: all 0.3s;        /*动画过渡*/
+}
+section.portfolio > nav .bar.state-1 .bar-inner{   /*.bar.state-1中间没有空格，表示同时满足这两个条件*/
+	margin-left: 0;
+	width: 42px;
+}
+section.portfolio > nav .bar.state-2 .bar-inner{
+	margin-left: 65px;
+	width: 50px;
+}
+section.portfolio > nav .bar.state-3 .bar-inner{
+	margin-left: 140px;
+	width: 104px;
+}
+
+section.portfolio .works{
+	position: relative;
+}
+section.portfolio .works > .big,
+section.portfolio .works > .small{
+	position: absolute;
 }
